@@ -1,7 +1,12 @@
 import React from 'react';
+import '../index.css';
 
-function App(props) {
-  return(<div>React</div>)
-}
+const App = () => {
+  return (
+    <div>
+        <div>React</div>
+    </div>
+  );
+};
 
 export default App
