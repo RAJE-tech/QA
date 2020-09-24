@@ -1,2 +1,1 @@
-# QA
-Questions &amp; Answers
+# Related Items & Comparisons
