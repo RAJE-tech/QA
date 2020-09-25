@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "Related Items & Comparison module for BRAC Retail Model",
   "main": "index.jsx",
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/test-setup.js"
-    ]
-  },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack -d -w"
   },
   "repository": {
