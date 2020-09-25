@@ -1,7 +1,7 @@
 {
-  "name": "related-items",
+  "name": "questions-and-answers",
   "version": "1.0.0",
-  "description": "Related Items & Comparison module for BRAC Retail Model",
+  "description": "Questions & Answers module for BRAC Retail Model",
   "main": "index.jsx",
   "scripts": {
     "test": "jest --coverage",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RAJE-tech/related-items.git"
+    "url": "git+https://github.com/RAJE-tech/QA.git"
   },
-  "author": "Erik Shelton",
+  "author": "John Doolittle",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RAJE-tech/related-items/issues"
+    "url": "https://github.com/RAJE-tech/QA/issues"
   },
-  "homepage": "https://github.com/RAJE-tech/related-items#readme",
+  "homepage": "https://github.com/RAJE-tech/QA#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "axios": "^0.20.0",
