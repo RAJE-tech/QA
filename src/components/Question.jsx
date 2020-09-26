@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import AnswersList from './AnswersList';
 
 function Question() {
   return (
-    <div>Question</div>
+    <div>
+      {/* questions go here */}
+      <AnswersList />
+    </div>
   );
 }
 

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import Answer from './Answer';
 
 function AnswersList() {
   return (
-    <div>List of Answers</div>
+    <div>
+      <Answer />
+    </div>
   );
 }
 
