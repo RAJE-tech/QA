@@ -26,15 +26,3 @@ function QuestionsList() {
 }
 
 export default QuestionsList;
-
-// useEffect(() => {
-//   getProductQuestionGet(userId)
-//     .then((res) => {
-//       // console.log('this is data: ', res);
-//       console.log('this is results: ', res.data.results);
-//       setProductQuestion(res.data.results[userId]);
-//     })
-//     .catch((err) => {
-//       throw err;
-//     });
-// }, []);
