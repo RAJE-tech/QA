@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import AnswersList from './AnswersList';
 import HelpfulBtn from './HelpfulBtn';
 
-function Question({question}) {
+function Question({question, key}) {
   return (
     <div>
-      <div>Q: {question.question_body}</div>
+      <div>{`Q: ${question.question_body}`}</div>
       <HelpfulBtn />
-      <AnswersList />
+      <AnswersList question={question} key={key} />
     </div>
   );
 }
