@@ -9,7 +9,7 @@ function QuestionsList() {
   useEffect(() => {
     getProductQuestions(productId)
       .then((res) => {
-        // console.log(res.data.results);
+        console.log('result data from Greenfield:', res.data.results);
         setQuestions(res.data.results);
       })
       .catch((err) => {
