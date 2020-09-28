@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import AnswersList from './AnswersList';
+import HelpfulBtn from './HelpfulBtn';
 
-function Question() {
+function Question({question}) {
   return (
     <div>
-      {/* questions go here */}
+      <div>Q: {question.question_body}</div>
+      <HelpfulBtn />
       <AnswersList />
     </div>
   );
