@@ -3,7 +3,7 @@ import Question from './Question';
 import getProductQuestions from '../api/getProductQuestions';
 
 function QuestionsList() {
-  const [productId, setProductId] = useState(1);
+  const [productId, setProductId] = useState(3);
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
