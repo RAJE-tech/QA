@@ -7,4 +7,8 @@ configure({ adapter: new Adapter() });
 
 describe('QuestionsList', () => {
   const wrapper = shallow(<QuestionsList />);
+
+  it('should render', () => {
+    shallow(<QuestionsList />);
+  });
 });
