@@ -18,6 +18,9 @@ function AnswersList({ question }) {
 
   return (
     <div>
+      <span>
+        <b>A: </b>
+      </span>
       {answers.map((answer) => <Answer answer={answer} key={answer.answer_id} />)}
     </div>
   );

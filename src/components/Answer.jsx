@@ -8,13 +8,14 @@ function Answer({ answer }) {
   } else {
     seller = answer.answerer_name;
   }
+
   return (
-    <div>
-      <div>{answer.body}</div>
+    <span>
+      <span>{answer.body}</span>
       <span>{seller}</span>
       <span>{answer.date}</span>
       <HelpfulBtn answer={answer} />
-    </div>
+    </span>
   );
 }
 
