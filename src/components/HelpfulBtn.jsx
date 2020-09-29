@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function HelpfulBtn() {
   return (
-    <div>Helpful? Yes (0)</div>
+    <span>Helpful? Yes (0)</span>
   );
 }
 
