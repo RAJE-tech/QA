@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
-function HelpfulBtn() {
+function HelpfulBtn(props) {
   return (
-    <span>Helpful? Yes (0)</span>
+    <span>
+      <span>Helpful? </span>
+      <span><u>Yes</u></span>
+      <span> (X) </span>
+    </span>
   );
 }
 
