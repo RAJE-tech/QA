@@ -1,10 +1,10 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import HelpfulBtn from '../src/components/HelpfulBtn';
+import QuestionHelpfulBtn from '../src/components/QuestionHelpfulBtn';
 
 configure({ adapter: new Adapter() });
 
-describe('HelpfulBtn', () => {
-  const wrapper = shallow(<HelpfulBtn />);
+describe('QuestionHelpfulBtn', () => {
+  const wrapper = shallow(<QuestionHelpfulBtn />);
 });
