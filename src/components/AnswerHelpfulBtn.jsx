@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function HelpfulBtn(props) {
+function AnswerHelpfulBtn(props) {
   return (
     <span>
       <span>Helpful? </span>
@@ -10,4 +10,4 @@ function HelpfulBtn(props) {
   );
 }
 
-export default HelpfulBtn;
+export default AnswerHelpfulBtn;

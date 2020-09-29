@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HelpfulBtn from './HelpfulBtn';
+import AnswerHelpfulBtn from './AnswerHelpfulBtn';
 
 function Answer({ answer }) {
   let seller;
@@ -14,7 +14,7 @@ function Answer({ answer }) {
       <span>{answer.body}</span>
       <span>{seller}</span>
       <span>{answer.date}</span>
-      <HelpfulBtn answer={answer} />
+      <AnswerHelpfulBtn answer={answer} />
     </span>
   );
 }
