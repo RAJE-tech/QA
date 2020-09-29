@@ -3,8 +3,22 @@ import QuestionsList from './QuestionsList';
 
 function App() {
   return (
-    <div>
-      <QuestionsList />
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          Questions & Answers
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          *Search Will Go Here*
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <QuestionsList />
+        </div>
+      </div>
     </div>
   );
 }
