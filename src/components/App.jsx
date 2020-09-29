@@ -6,7 +6,7 @@ function App() {
     <div className="container">
       <div className="row">
         <div className="col">
-          Questions & Answers
+          <h5>QUESTIONS & ANSWERS</h5>
         </div>
       </div>
       <div className="row">

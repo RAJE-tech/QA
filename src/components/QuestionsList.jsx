@@ -20,7 +20,7 @@ function QuestionsList() {
   return (
     <div>
       {questions.map((question) => <Question question={question} key={question.question_id} />)}
-      <p>Load More Answers</p>
+      <div><b>LOAD MORE ANSWERS</b></div>
     </div>
   );
 }

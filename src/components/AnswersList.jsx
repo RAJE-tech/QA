@@ -18,9 +18,7 @@ function AnswersList({ question }) {
 
   return (
     <div>
-      <span>
-        <b>A: </b>
-      </span>
+      <span className="jgd-bold">A: </span>
       {answers.map((answer) => <Answer answer={answer} key={answer.answer_id} />)}
     </div>
   );
