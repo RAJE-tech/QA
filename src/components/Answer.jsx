@@ -15,17 +15,20 @@ function Answer({ answer }) {
       <div className="col">
         <div className="row">
           <div className="col">
-            <div>{answer.body}</div>
+            <p>{answer.body}</p>
           </div>
         </div>
         <div className="row">
           <div className="col">
             <div>
-              <span className="jgd-small-text">{seller}</span>
-              <span className="jgd-small-text">{answer.date}</span>
+              <span className="jgd-small-text">
+                {seller}
+                {`, ${answer.date}`}
+              </span>
               <AnswerHelpfulBtn answer={answer} />
               <ReportAnswerBtn answer={answer} />
             </div>
+            <br />
           </div>
         </div>
       </div>
