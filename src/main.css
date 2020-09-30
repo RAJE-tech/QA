@@ -9,6 +9,12 @@
   font-size: 1.2rem;
 }
 
+/* clickable components */
 .jgd-pointer {
   cursor: pointer;
+}
+
+/* "helpful?" component once clicked */
+.jgd-helpful {
+  color: blue;
 }

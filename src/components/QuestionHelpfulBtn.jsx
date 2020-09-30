@@ -21,8 +21,18 @@ function QuestionHelpfulBtn({ question }) {
   return (
     <span>
       <span>Helpful? </span>
-      <span className="jgd-pointer" onKeyDown={null} onClick={!isHelpful ? markAsHelpful : null}><u>Yes</u></span>
-      <span>{` (${helpfulness}) `}</span>
+      <span
+        onKeyDown={null}
+        onClick={!isHelpful ? markAsHelpful : null}
+        className={!isHelpful ? 'jgd-pointer' : 'jgd-pointer jgd-helpful'}
+      >
+        <u>Yes</u>
+      </span>
+      <span
+        className={!isHelpful ? null : 'jgd-helpful'}
+      >
+        {` (${helpfulness}) `}
+      </span>
     </span>
   );
 }
