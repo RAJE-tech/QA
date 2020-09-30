@@ -18,7 +18,6 @@ function AnswersList({ question }) {
 
   return (
     <div>
-      <span className="jgd-bold">A: </span>
       {answers.map((answer) => <Answer answer={answer} key={answer.answer_id} />)}
     </div>
   );

@@ -7,9 +7,22 @@ function Question({ question }) {
   return (
     <div className="row">
       <div className="col-8">
-        <span className="jgd-bold">Q: </span>
-        <span className="jgd-bold">{question.question_body}</span>
-        <AnswersList question={question} />
+        <div className="row">
+          <div className="col-0.5">
+            <p className="jgd-bold">Q:</p>
+          </div>
+          <div className="col">
+            <div className="jgd-bold">{question.question_body}</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-0.5">
+            <p className="jgd-bold">A:</p>
+          </div>
+          <div className="col">
+            <div><AnswersList question={question} /></div>
+          </div>
+        </div>
       </div>
       <div className="col" style={{ 'text-align': 'right' }}>
         <QuestionHelpfulBtn question={question} />
