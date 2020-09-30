@@ -11,15 +11,23 @@ function Answer({ answer }) {
   }
 
   return (
-    <div className="col">
-      <div className="row">
-        <div>{answer.body}</div>
-      </div>
-      <div className="row">
-        <span className="jgd-small-text">{seller}</span>
-        <span className="jgd-small-text">{answer.date}</span>
-        <AnswerHelpfulBtn answer={answer} />
-        <ReportAnswerBtn answer={answer} />
+    <div className="row">
+      <div className="col">
+        <div className="row">
+          <div className="col">
+            <div>{answer.body}</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div>
+              <span className="jgd-small-text">{seller}</span>
+              <span className="jgd-small-text">{answer.date}</span>
+              <AnswerHelpfulBtn answer={answer} />
+              <ReportAnswerBtn answer={answer} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
