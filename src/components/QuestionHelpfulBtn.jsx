@@ -19,7 +19,7 @@ function QuestionHelpfulBtn({ question }) {
   }
 
   return (
-    <span>
+    <span className="jgd-small-text">
       <span>Helpful? </span>
       <span
         onKeyDown={null}

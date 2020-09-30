@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function AddAnswerBtn() {
   return (
-    <span>Add Answer</span>
+    <span className="jgd-small-text">Add Answer</span>
   );
 }
 

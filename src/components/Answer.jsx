@@ -13,8 +13,8 @@ function Answer({ answer }) {
   return (
     <span>
       <span>{answer.body}</span>
-      <span>{seller}</span>
-      <span>{answer.date}</span>
+      <span className="jgd-small-text">{seller}</span>
+      <span className="jgd-small-text">{answer.date}</span>
       <AnswerHelpfulBtn answer={answer} />
       <ReportAnswerBtn answer={answer} />
     </span>
