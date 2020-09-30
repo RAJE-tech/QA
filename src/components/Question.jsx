@@ -20,7 +20,7 @@ function Question({ question }) {
             <p className="jgd-bold">A:</p>
           </div>
           <div className="col">
-            <div><AnswersList question={question} /></div>
+            <AnswersList question={question} />
           </div>
         </div>
       </div>
