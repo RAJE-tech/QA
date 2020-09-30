@@ -5,12 +5,16 @@ import AddAnswerBtn from './AddAnswerBtn';
 
 function Question({ question }) {
   return (
-    <div>
-      <span className="jgd-bold">Q: </span>
-      <span className="jgd-bold">{question.question_body}</span>
-      <QuestionHelpfulBtn question={question} />
-      <AddAnswerBtn questionId={question.question_id} />
-      <AnswersList question={question} />
+    <div className="row">
+      <div className="col-8">
+        <span className="jgd-bold">Q: </span>
+        <span className="jgd-bold">{question.question_body}</span>
+        <AnswersList question={question} />
+      </div>
+      <div className="col" style={{ 'text-align': 'right' }}>
+        <QuestionHelpfulBtn question={question} />
+        <AddAnswerBtn questionId={question.question_id} />
+      </div>
     </div>
   );
 }
