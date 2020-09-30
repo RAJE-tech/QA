@@ -18,3 +18,8 @@
 .jgd-helpful {
   color: blue;
 }
+
+/* "Report" component once clicked */
+.jgd-reported {
+  color: red;
+}

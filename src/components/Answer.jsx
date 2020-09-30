@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AnswerHelpfulBtn from './AnswerHelpfulBtn';
+import ReportAnswerBtn from './ReportAnswerBtn';
 
 function Answer({ answer }) {
   let seller;
@@ -15,6 +16,7 @@ function Answer({ answer }) {
       <span>{seller}</span>
       <span>{answer.date}</span>
       <AnswerHelpfulBtn answer={answer} />
+      <ReportAnswerBtn answer={answer} />
     </span>
   );
 }
