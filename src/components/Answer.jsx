@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AnswerHelpfulBtn from './AnswerHelpfulBtn';
 import ReportAnswerBtn from './ReportAnswerBtn';
+import convertDate from './dateConverter';
 
 function Answer({ answer }) {
   let seller;
@@ -23,7 +24,7 @@ function Answer({ answer }) {
             <div>
               <span className="jgd-small-text">
                 {seller}
-                {`, ${answer.date}`}
+                {`, ${convertDate(answer.date)}`}
               </span>
               <AnswerHelpfulBtn answer={answer} />
               <ReportAnswerBtn answer={answer} />
