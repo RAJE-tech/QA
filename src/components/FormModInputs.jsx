@@ -1,10 +1,12 @@
-import React, { useEffect, useReducer } from 'react';
-import {
-  Form, FormCheck, FormFile, Button
-} from 'react-bootstrap';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Form, Button } from 'react-bootstrap';
 
-const FormModInputs = () => {
-  // placeholder
+const FormModInputs = ({ onHide, question }) => {
+  return (
+    <div>
+    </div>
+  );
 };
 
 export default FormModInputs;
