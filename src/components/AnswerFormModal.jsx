@@ -1,8 +1,8 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-import FormModInputs from './FormModInputs';
+import AnswerFormModInputs from './AnswerFormModInputs';
 
-function FormModal({ show, onHide, question }) {
+function AnswerFormModal({ show, onHide, question }) {
   if (show) {
     return (
       <Modal show={show} onHide={onHide}>
@@ -12,7 +12,7 @@ function FormModal({ show, onHide, question }) {
           </Modal.Header>
 
           <Modal.Body>
-            <FormModInputs onHide={onHide} question={question} />
+            <AnswerFormModInputs onHide={onHide} question={question} />
           </Modal.Body>
           <Modal.Footer />
         </Modal.Dialog>
@@ -22,4 +22,4 @@ function FormModal({ show, onHide, question }) {
   return <div />;
 }
 
-export default FormModal;
+export default AnswerFormModal;

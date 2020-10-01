@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 
-const FormModInputs = ({ onHide, question }) => {
+const AnswerFormModInputs = ({ onHide, question }) => {
   const [state, setState] = useState({
     body: '',
     name: '',
@@ -79,4 +79,4 @@ const FormModInputs = ({ onHide, question }) => {
   );
 };
 
-export default FormModInputs;
+export default AnswerFormModInputs;

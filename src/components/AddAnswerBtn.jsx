@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FormModal from './FormModal';
+import AnswerFormModal from './AnswerFormModal';
 
 function AddAnswerBtn({ question }) {
   const [show, setShow] = useState(false);
@@ -8,7 +8,7 @@ function AddAnswerBtn({ question }) {
   return (
     <span>
       <span className="jgd-small-text jgd-pointer jgd-faded" onClick={handleShow} onKeyDown={null}><u>Add Answer</u></span>
-      <FormModal show={show} question={question} onHide={handleClose} />
+      <AnswerFormModal show={show} question={question} onHide={handleClose} />
     </span>
   );
 }
