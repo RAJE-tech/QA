@@ -29,6 +29,13 @@ const FormModInputs = ({ onHide, question }) => {
         throw error;
       });
   }
+
+  function handleChange(event) {
+    const { value } = event.target;
+    setState({
+      ...state,
+      [event.target.name]: value,
+    });
   }
 
   return (
