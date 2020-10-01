@@ -8,8 +8,21 @@ function AnswersList({ question }) {
   useEffect(() => {
     getProductAnswers(question.question_id)
       .then((res) => {
-        console.log('result answer data from Greenfield:', res.data.results);
-        setAnswers(res.data.results);
+        let sellerFirst = [];
+        let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
+        if (filtered.length > 0) {
+          filtered.map((answer) => sellerFirst.push(answer));
+          for (let i = 0; i < res.data.results.length; i += 1) {
+            if (res.data.results[i].answerer_name !== 'Seller') {
+              sellerFirst.push(res.data.results[i]);
+            }
+          }
+          console.log('Seller sorted list:', sellerFirst);
+          setAnswers(sellerFirst);
+        } else {
+          console.log('Result answer data from Greenfield:', res.data.results);
+          setAnswers(res.data.results);
+        }
       })
       .catch((err) => {
         throw err;
