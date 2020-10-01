@@ -48,6 +48,14 @@ const FormModInputs = ({ onHide, question }) => {
           <Form.Control as="textarea" rows="3" name="body" value={state.body} onChange={handleChange} />
         </Form.Group>
 
+        <Form.Group controlId="name">
+          <Form.Label>What is your nickname?</Form.Label>
+          <Form.Text className="jgd-faded">
+            For privacy reasons, do not use your full name or email address
+          </Form.Text>
+          <Form.Control as="textarea" rows="1" name="name" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
+        </Form.Group>
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
