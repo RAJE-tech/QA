@@ -9,15 +9,15 @@ function Question({ question }) {
       <div className="col-8">
         <div className="row">
           <div className="col-0.5">
-            <p className="jgd-bold">Q:</p>
+            <p className="jgd-large-bold">Q:</p>
           </div>
           <div className="col">
-            <div className="jgd-bold">{question.question_body}</div>
+            <div className="jgd-large-bold">{question.question_body}</div>
           </div>
         </div>
         <div className="row">
           <div className="col-0.5">
-            <p className="jgd-bold">A:</p>
+            <p className="jgd-large-bold">A:</p>
           </div>
           <div className="col">
             <AnswersList question={question} />
