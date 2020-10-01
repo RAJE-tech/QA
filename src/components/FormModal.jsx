@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-import FormInputs from './FormModInputs';
+import FormModInputs from './FormModInputs';
 
 function FormModal({ show, onHide }) {
   if (show) {
@@ -12,7 +12,7 @@ function FormModal({ show, onHide }) {
           </Modal.Header>
 
           <Modal.Body>
-            <FormInputs onHide={onHide} />
+            <FormModInputs onHide={onHide} />
           </Modal.Body>
           <Modal.Footer />
         </Modal.Dialog>
