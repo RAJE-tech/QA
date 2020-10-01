@@ -4,13 +4,6 @@ import ReportAnswerBtn from './ReportAnswerBtn';
 import convertDate from './dateConverter';
 
 function Answer({ answer }) {
-  let seller;
-  if (answer.answerer_name === 'Seller') {
-    seller = <b>{answer.answerer_name}</b>;
-  } else {
-    seller = answer.answerer_name;
-  }
-
   return (
     <div className="row">
       <div className="col">
@@ -22,14 +15,18 @@ function Answer({ answer }) {
         <div className="row">
           <div className="col">
             <div>
-              <span className="jgd-small-text">
+              <span className="jgd-small-text jgd-faded">
                 {'by '}
-                {seller}
+              </span>
+              <span className={answer.answerer_name === 'Seller' ? 'jgd-small-text jgd-small-bold' : 'jgd-small-text jgd-faded'}>
+                {answer.answerer_name}
+              </span>
+              <span className="jgd-small-text jgd-faded">
                 {`, ${convertDate(answer.date)}`}
               </span>
-              <span className="jgd-divider">|</span>
+              <span className="jgd-divider jgd-faded">|</span>
               <AnswerHelpfulBtn answer={answer} />
-              <span className="jgd-divider">|</span>
+              <span className="jgd-divider jgd-faded">|</span>
               <ReportAnswerBtn answer={answer} />
             </div>
             <br />

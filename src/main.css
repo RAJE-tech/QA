@@ -29,7 +29,18 @@
   font-size: small;
 }
 
+/* small bold text */
+.jgd-small-bold {
+  font-weight: bolder;
+}
+
+/* spaces out elements */
 .jgd-divider {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+/* more transparent components */
+.jgd-faded {
+  color: #2125298c;
 }

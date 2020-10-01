@@ -17,7 +17,7 @@ function ReportAnswerBtn({ answer }) {
   }
 
   return (
-    <span className="jgd-small-text">
+    <span className="jgd-small-text jgd-faded">
       <span
         onKeyDown={null}
         onClick={!isReported ? markAsReported : null}
