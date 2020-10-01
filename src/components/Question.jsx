@@ -26,6 +26,7 @@ function Question({ question }) {
       </div>
       <div className="col" style={{ textAlign: 'right' }}>
         <QuestionHelpfulBtn question={question} />
+        <span className="jgd-divider">|</span>
         <AddAnswerBtn questionId={question.question_id} />
       </div>
     </div>

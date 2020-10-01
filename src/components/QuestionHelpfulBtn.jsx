@@ -31,7 +31,7 @@ function QuestionHelpfulBtn({ question }) {
       <span
         className={!isHelpful ? null : 'jgd-helpful'}
       >
-        {` (${helpfulness}) `}
+        {` (${helpfulness})`}
       </span>
     </span>
   );

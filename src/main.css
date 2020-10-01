@@ -28,3 +28,8 @@
 .jgd-small-text {
   font-size: small;
 }
+
+.jgd-divider {
+  margin-left: 10px;
+  margin-right: 10px;
+}

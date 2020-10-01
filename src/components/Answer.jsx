@@ -23,10 +23,13 @@ function Answer({ answer }) {
           <div className="col">
             <div>
               <span className="jgd-small-text">
+                {'by '}
                 {seller}
                 {`, ${convertDate(answer.date)}`}
               </span>
+              <span className="jgd-divider">|</span>
               <AnswerHelpfulBtn answer={answer} />
+              <span className="jgd-divider">|</span>
               <ReportAnswerBtn answer={answer} />
             </div>
             <br />
