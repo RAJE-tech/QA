@@ -56,6 +56,21 @@ const FormModInputs = ({ onHide, question }) => {
           <Form.Control as="textarea" rows="1" name="name" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
         </Form.Group>
 
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address:</Form.Label>
+          <Form.Text className="jgd-faded">
+            For authentication reasons, you will not be emailed
+          </Form.Text>
+          <Form.Control type="email" placeholder="Example: jack@email.com" name="email" value={state.email} onChange={handleChange} />
+        </Form.Group>
+
+        <Form.Group>
+          <Form.File
+            id="Reviewfile added"
+            label="Upload photo"
+          />
+        </Form.Group>
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
