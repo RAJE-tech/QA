@@ -24,7 +24,7 @@ function Question({ question }) {
           </div>
         </div>
       </div>
-      <div className="col" style={{ 'text-align': 'right' }}>
+      <div className="col" style={{ textAlign: 'right' }}>
         <QuestionHelpfulBtn question={question} />
         <AddAnswerBtn questionId={question.question_id} />
       </div>
