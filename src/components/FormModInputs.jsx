@@ -41,6 +41,17 @@ const FormModInputs = ({ onHide, question }) => {
   return (
 
     <div>
+      <Form onSubmit={submitForm}>
+
+        <Form.Group controlId="body">
+          <Form.Label>Your Answer</Form.Label>
+          <Form.Control as="textarea" rows="3" name="body" value={state.body} onChange={handleChange} />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     </div>
   );
 };
