@@ -57,7 +57,6 @@ function Question({ question, productName }) {
         <AddAnswerBtn
           question={question}
           productName={productName}
-          answers={answers}
           setAnswers={setAnswers}
         />
       </div>
