@@ -4,10 +4,7 @@ import { Form, Button, FormFile } from 'react-bootstrap';
 import getProductAnswers from '../api/getProductAnswers';
 
 const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
-<<<<<<< Updated upstream
-=======
   const [validated, setValidated] = useState(false);
->>>>>>> Stashed changes
   const [state, setState] = useState({
     body: '',
     name: '',
@@ -17,14 +14,11 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
 
   function submitForm(event) {
     event.preventDefault();
-<<<<<<< Updated upstream
-=======
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
     }
     setValidated(true);
->>>>>>> Stashed changes
     axios({
       method: 'post',
       url: `http://52.26.193.201:3000/qa/${question.question_id}/answers`,
@@ -73,13 +67,6 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
   return (
 
     <div>
-<<<<<<< Updated upstream
-      <Form onSubmit={submitForm}>
-
-        <Form.Group controlId="body">
-          <Form.Label>Your Answer*</Form.Label>
-          <Form.Control as="textarea" rows="3" name="body" value={state.body} maxlength="1000" onChange={handleChange} />
-=======
       <Form noValidate validated={validated} onSubmit={submitForm}>
 
         <Form.Group controlId="body">
@@ -88,8 +75,7 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
           <Form.Control.Feedback type="invalid">
             Please provide an answer.
           </Form.Control.Feedback>
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
->>>>>>> Stashed changes
+          <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group controlId="name">
@@ -97,15 +83,11 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
           <Form.Text className="jgd-faded">
             For privacy reasons, do not use your full name or email address
           </Form.Text>
-<<<<<<< Updated upstream
-          <Form.Control as="textarea" rows="1" name="name" maxlength="60" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
-=======
           <Form.Control required as="textarea" rows="1" name="name" maxlength="60" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
           <Form.Control.Feedback type="invalid">
             Please choose a nickname.
           </Form.Control.Feedback>
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
->>>>>>> Stashed changes
+          <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
@@ -113,15 +95,11 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
           <Form.Text className="jgd-faded">
             For authentication reasons, you will not be emailed
           </Form.Text>
-<<<<<<< Updated upstream
-          <Form.Control type="email" placeholder="Example: jack@email.com" maxlength="60" name="email" value={state.email} onChange={handleChange} />
-=======
           <Form.Control required type="email" placeholder="Example: jack@email.com" maxlength="60" name="email" value={state.email} onChange={handleChange} />
           <Form.Control.Feedback type="invalid">
             Please provide a valid email.
           </Form.Control.Feedback>
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
->>>>>>> Stashed changes
+          <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
