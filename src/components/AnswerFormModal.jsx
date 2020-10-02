@@ -14,7 +14,6 @@ function AnswerFormModal({ show, onHide, question }) {
           <Modal.Body>
             <AnswerFormModInputs onHide={onHide} question={question} />
           </Modal.Body>
-          <Modal.Footer />
         </Modal.Dialog>
       </Modal>
     );

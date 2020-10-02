@@ -71,7 +71,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="float-right">
           Submit
         </Button>
       </Form>
