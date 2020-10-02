@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, FormFile } from 'react-bootstrap';
 
 const AnswerFormModInputs = ({ onHide, question }) => {
   const [state, setState] = useState({
@@ -67,8 +67,12 @@ const AnswerFormModInputs = ({ onHide, question }) => {
         <Form.Group>
           <Form.File
             id="Reviewfile added"
+            name="file"
             label="Upload photos"
-          />
+            as="div"
+          >
+            <FormFile.Input multiple />
+          </Form.File>
         </Form.Group>
 
         <Button variant="primary" type="submit" size="lg" className="float-right">
