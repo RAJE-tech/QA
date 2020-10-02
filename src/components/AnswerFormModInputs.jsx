@@ -45,7 +45,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
 
         <Form.Group controlId="body">
           <Form.Label>Your Answer</Form.Label>
-          <Form.Control as="textarea" rows="3" name="body" value={state.body} onChange={handleChange} />
+          <Form.Control as="textarea" rows="3" name="body" value={state.body} maxlength="1000" onChange={handleChange} />
         </Form.Group>
 
         <Form.Group controlId="name">
@@ -53,7 +53,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
           <Form.Text className="jgd-faded">
             For privacy reasons, do not use your full name or email address
           </Form.Text>
-          <Form.Control as="textarea" rows="1" name="name" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
+          <Form.Control as="textarea" rows="1" name="name" maxlength="60" placeholder="Example: jack543!" value={state.name} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
@@ -61,7 +61,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
           <Form.Text className="jgd-faded">
             For authentication reasons, you will not be emailed
           </Form.Text>
-          <Form.Control type="email" placeholder="Example: jack@email.com" name="email" value={state.email} onChange={handleChange} />
+          <Form.Control type="email" placeholder="Example: jack@email.com" maxlength="60" name="email" value={state.email} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group>
