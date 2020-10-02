@@ -12,7 +12,7 @@ function AnswerFormModal({ show, onHide, question, productName }) {
           </Modal.Header>
 
           <Modal.Body>
-            <p>{`${productName}: ${question.question_body}`}</p>
+            <p>{`${productName}: "${question.question_body}"`}</p>
             <AnswerFormModInputs onHide={onHide} question={question} />
           </Modal.Body>
         </Modal.Dialog>
