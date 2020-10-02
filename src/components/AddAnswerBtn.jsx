@@ -8,7 +8,12 @@ function AddAnswerBtn({ question, productName }) {
   return (
     <span>
       <span className="jgd-small-text jgd-pointer jgd-faded" onClick={handleShow} onKeyDown={null}><u>Add Answer</u></span>
-      <AnswerFormModal show={show} question={question} productName={productName} onHide={handleClose} />
+      <AnswerFormModal
+        show={show}
+        question={question}
+        productName={productName}
+        onHide={handleClose}
+      />
     </span>
   );
 }
