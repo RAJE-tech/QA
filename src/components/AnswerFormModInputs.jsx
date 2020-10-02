@@ -44,7 +44,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
       <Form onSubmit={submitForm}>
 
         <Form.Group controlId="body">
-          <Form.Label>Your Answer:</Form.Label>
+          <Form.Label>Your Answer</Form.Label>
           <Form.Control as="textarea" rows="3" name="body" value={state.body} onChange={handleChange} />
         </Form.Group>
 
@@ -57,7 +57,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address:</Form.Label>
+          <Form.Label>Email address</Form.Label>
           <Form.Text className="jgd-faded">
             For authentication reasons, you will not be emailed
           </Form.Text>
@@ -71,7 +71,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="float-right">
+        <Button variant="primary" type="submit" size="large" className="float-right">
           Submit
         </Button>
       </Form>
