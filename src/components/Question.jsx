@@ -3,7 +3,7 @@ import AnswersList from './AnswersList';
 import QuestionHelpfulBtn from './QuestionHelpfulBtn';
 import AddAnswerBtn from './AddAnswerBtn';
 
-function Question({ question }) {
+function Question({ question, productName }) {
   return (
     <div className="row">
       <div className="col-8">
@@ -27,7 +27,7 @@ function Question({ question }) {
       <div className="col" style={{ textAlign: 'right' }}>
         <QuestionHelpfulBtn question={question} />
         <span className="jgd-divider jgd-faded">|</span>
-        <AddAnswerBtn question={question} />
+        <AddAnswerBtn question={question} productName={productName} />
       </div>
     </div>
   );
