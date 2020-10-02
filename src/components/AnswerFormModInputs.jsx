@@ -64,12 +64,12 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
       <Form onSubmit={submitForm}>
 
         <Form.Group controlId="body">
-          <Form.Label>Your Answer</Form.Label>
+          <Form.Label>Your Answer*</Form.Label>
           <Form.Control as="textarea" rows="3" name="body" value={state.body} maxlength="1000" onChange={handleChange} />
         </Form.Group>
 
         <Form.Group controlId="name">
-          <Form.Label>What is your nickname?</Form.Label>
+          <Form.Label>What is your nickname?*</Form.Label>
           <Form.Text className="jgd-faded">
             For privacy reasons, do not use your full name or email address
           </Form.Text>
@@ -77,7 +77,7 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Email address*</Form.Label>
           <Form.Text className="jgd-faded">
             For authentication reasons, you will not be emailed
           </Form.Text>
