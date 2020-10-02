@@ -54,7 +54,12 @@ function Question({ question, productName }) {
       <div className="col" style={{ textAlign: 'right' }}>
         <QuestionHelpfulBtn question={question} />
         <span className="jgd-divider jgd-faded">|</span>
-        <AddAnswerBtn question={question} productName={productName} />
+        <AddAnswerBtn
+          question={question}
+          productName={productName}
+          answers={answers}
+          setAnswers={setAnswers}
+        />
       </div>
     </div>
   );
