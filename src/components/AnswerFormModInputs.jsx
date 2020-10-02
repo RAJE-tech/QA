@@ -44,7 +44,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
       <Form onSubmit={submitForm}>
 
         <Form.Group controlId="body">
-          <Form.Label>Your Answer</Form.Label>
+          <Form.Label>Your Answer:</Form.Label>
           <Form.Control as="textarea" rows="3" name="body" value={state.body} onChange={handleChange} />
         </Form.Group>
 
@@ -67,7 +67,7 @@ const AnswerFormModInputs = ({ onHide, question }) => {
         <Form.Group>
           <Form.File
             id="Reviewfile added"
-            label="Upload photo"
+            label="Upload photos"
           />
         </Form.Group>
 
