@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AnswerFormModal from './AnswerFormModal';
 
-function AddAnswerBtn({ question, productName }) {
+function AddAnswerBtn({ question, productName, setAnswers }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -13,6 +13,7 @@ function AddAnswerBtn({ question, productName }) {
         question={question}
         productName={productName}
         onHide={handleClose}
+        setAnswers={setAnswers}
       />
     </span>
   );

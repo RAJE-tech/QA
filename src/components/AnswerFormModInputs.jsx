@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, FormFile } from 'react-bootstrap';
+import getProductAnswers from '../api/getProductAnswers';
 
-const AnswerFormModInputs = ({ onHide, question }) => {
+const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
   const [state, setState] = useState({
     body: '',
     name: '',
@@ -24,6 +25,25 @@ const AnswerFormModInputs = ({ onHide, question }) => {
     })
       .then(() => {
         onHide();
+        getProductAnswers(question.question_id)
+          .then((res) => {
+            let sellerFirst = [];
+            let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
+            if (filtered.length > 0) {
+              filtered.map((answer) => sellerFirst.push(answer));
+              for (let i = 0; i < res.data.results.length; i += 1) {
+                if (res.data.results[i].answerer_name !== 'Seller') {
+                  sellerFirst.push(res.data.results[i]);
+                }
+              }
+              setAnswers(sellerFirst);
+            } else {
+              setAnswers(res.data.results);
+            }
+          })
+          .catch((err) => {
+            throw err;
+          });
       })
       .catch((error) => {
         throw error;

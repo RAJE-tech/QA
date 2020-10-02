@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import AnswerFormModInputs from './AnswerFormModInputs';
 
-function AnswerFormModal({ show, onHide, question, productName }) {
+function AnswerFormModal({ show, onHide, question, productName, setAnswers }) {
   if (show) {
     return (
       <Modal show={show} onHide={onHide}>
@@ -13,7 +13,11 @@ function AnswerFormModal({ show, onHide, question, productName }) {
 
           <Modal.Body>
             <p>{`${productName}: "${question.question_body}"`}</p>
-            <AnswerFormModInputs onHide={onHide} question={question} />
+            <AnswerFormModInputs
+              onHide={onHide}
+              question={question}
+              setAnswers={setAnswers}
+            />
           </Modal.Body>
         </Modal.Dialog>
       </Modal>
