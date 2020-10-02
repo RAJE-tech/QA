@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import getProductQuestions from '../api/getProductQuestions';
+import getProductInfo from '../api/getProductInfo';
 
 function QuestionsList() {
-  const [productId, setProductId] = useState(25);
+  const [productId, setProductId] = useState(3030);
   const [questions, setQuestions] = useState([]);
+  const [productName, setProductName] = useState('');
 
   useEffect(() => {
     getProductQuestions(productId)
@@ -17,9 +19,20 @@ function QuestionsList() {
       });
   }, [productId]);
 
+  useEffect(() => {
+    getProductInfo(productId)
+      .then((res) => {
+        console.log('this is the product name: ', res.data.name);
+        setProductName(res.data.name);
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }, [productId]);
+
   return (
     <div>
-      {questions.map((question) => <Question question={question} key={question.question_id} />)}
+      {questions.map((question) => <Question question={question} key={question.question_id} productName={productName}/>)}
       <div><b>LOAD MORE ANSWERS</b></div>
     </div>
   );
