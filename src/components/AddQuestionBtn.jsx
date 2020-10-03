@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import QuestionFormModal from './QuestionFormModal';
 
 function AddQuestionBtn() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <span>
       <Button variant="outline-dark jgd-sharp-edge jgd-large-padded" size="lg">
@@ -13,6 +17,7 @@ function AddQuestionBtn() {
         </span>
       </Button>
       {' '}
+      <QuestionFormModal />
     </span>
   );
 }
