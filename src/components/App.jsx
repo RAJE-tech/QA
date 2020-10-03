@@ -7,8 +7,9 @@ import getProductInfo from '../api/getProductInfo';
 
 function App() {
   const [productId, setProductId] = useState(3);
-  const [questions, setQuestions] = useState([]);
   const [productName, setProductName] = useState('');
+  const [questions, setQuestions] = useState([]);
+  const [shownQuestions, setShownQuestions] = useState();
 
   useEffect(() => {
     getProductQuestions(productId)
