@@ -82,3 +82,31 @@
 .jgd-solid-border {
   border: solid 1px;
 }
+
+/* magnifying glass search icon */
+.jgd-magnifying-glass {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* get that border out of here */
+.jgd-no-border {
+  border: none;
+}
+
+/* turns off blue outline of active inputs */
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* vertical spacing of components */
+.jgd-component-space {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
