@@ -15,7 +15,6 @@ function QuestionFormModal({productId, productName, show, onHide, setQuestions})
             <p>{`About the ${productName}`}</p>
             <QuestionFormModInputs
               onHide={onHide}
-              question={question}
               setQuestions={setQuestions}
               productId={productId}
             />
