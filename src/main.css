@@ -115,3 +115,13 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* top-most component */
+.jgd-top-space {
+  margin-top: 30px;
+}
+
+/* bottom-most component */
+.jgd-bottom-space {
+  margin-bottom: 30px;
+}

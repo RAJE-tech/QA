@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row jgd-top-space">
         <div className="col">
           <h5>QUESTIONS & ANSWERS</h5>
         </div>
@@ -55,7 +55,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="row">
+      <div className="row jgd-bottom-space">
         <div className="col">
           <AddQuestionBtn
             productId={productId}
