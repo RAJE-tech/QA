@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import QuestionFormModal from './QuestionFormModal';
 
-function AddQuestionBtn() {
+function AddQuestionBtn({ productId, productName, setQuestions }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <span>
-      <Button variant="outline-dark jgd-sharp-edge jgd-large-padded" size="lg">
+      <Button variant="outline-dark jgd-sharp-edge jgd-large-padded" size="lg" onClick={handleShow}>
         <span className="jgd-small-bold">
           ADD A QUESTION
         </span>
@@ -17,7 +17,13 @@ function AddQuestionBtn() {
         </span>
       </Button>
       {' '}
-      <QuestionFormModal />
+      <QuestionFormModal
+        show={show}
+        productId={productId}
+        productName={productName}
+        onHide={handleClose}
+        setQuestions={setQuestions}
+      />
     </span>
   );
 }

@@ -54,6 +54,7 @@ function App() {
       <div className="row">
         <div className="col">
           <AddQuestionBtn
+            productId={productId}
             productName={productName}
             setQuestions={setQuestions}
           />
