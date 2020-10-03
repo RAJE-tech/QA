@@ -53,7 +53,10 @@ function App() {
       </div>
       <div className="row">
         <div className="col">
-          <AddQuestionBtn />
+          <AddQuestionBtn
+            productName={productName}
+            setQuestions={setQuestions}
+          />
         </div>
       </div>
     </div>
