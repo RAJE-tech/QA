@@ -33,7 +33,6 @@ function QuestionsList() {
   return (
     <div>
       {questions.map((question) => <Question question={question} key={question.question_id} productName={productName}/>)}
-      <div><b>LOAD MORE ANSWERS</b></div>
     </div>
   );
 }
