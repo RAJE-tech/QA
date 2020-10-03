@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import QuestionsList from './QuestionsList';
+import AddQuestionBtn from './AddQuestionBtn';
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
       <div className="row">
         <div className="col">
           <QuestionsList />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <AddQuestionBtn />
         </div>
       </div>
     </div>
