@@ -4,7 +4,7 @@ import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
 function QuestionsList() {
-  const [productId, setProductId] = useState(3030);
+  const [productId, setProductId] = useState(3);
   const [questions, setQuestions] = useState([]);
   const [productName, setProductName] = useState('');
 
