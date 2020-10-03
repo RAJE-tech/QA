@@ -29,9 +29,14 @@
   font-size: small;
 }
 
-/* large text */
+/* x-large text */
 .jgd-xlarge-text {
   font-size: x-large;
+}
+
+/* large text */
+.jgd-large-text {
+  font-size: large;
 }
 
 /* middle vertical allignment */

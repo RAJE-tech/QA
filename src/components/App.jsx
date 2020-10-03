@@ -41,7 +41,10 @@ function App() {
       </div>
       <div className="row">
         <div className="col">
-          <Search />
+          <Search
+            questions={questions}
+            setQuestions={setQuestions}
+          />
         </div>
       </div>
       <div className="row">

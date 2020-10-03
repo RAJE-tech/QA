@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-function Search() {
+function Search({ questions, setQuestions }) {
+  const [state, setState] = useState({
+    searchInput: '',
+  });
+
+  function handleChange(event) {
+    const { value } = event.target;
+    setState({
+      ...state,
+      searchInput: value,
+    });
+  }
+
   return (
     <div className="row jgd-solid-border jgd-sharp-edge no-gutters jgd-component-space">
       <div className="col-11">
-        <input type="search" className="form-control ds-input jgd-small-bold jgd-large-padded jgd-no-border" id="search-input" placeholder="HAVE A QUESTION? SEARCH FOR ANSWERS..." aria-label="Search for..." autoComplete="off" spellCheck="false" role="searchbox" aria-autocomplete="list" aria-owns="algolia-autocomplete-listbox-0" />
+        <input type="search" className="form-control ds-input jgd-small-bold jgd-large-padded jgd-no-border jgd-large-text" id="search-input" placeholder="HAVE A QUESTION? SEARCH FOR ANSWERS..." aria-label="Search for..." autoComplete="off" spellCheck="false" role="searchbox" aria-autocomplete="list" aria-owns="algolia-autocomplete-listbox-0" onChange={handleChange} />
       </div>
       <div className="col">
         <div className="jgd-magnifying-glass">
