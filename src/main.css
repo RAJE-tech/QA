@@ -77,3 +77,8 @@
 .jgd-left-padded {
   padding-left: 20px;
 }
+
+/* solid 1px border */
+.jgd-solid-border {
+  border: solid 1px;
+}
