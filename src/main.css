@@ -29,6 +29,16 @@
   font-size: small;
 }
 
+/* large text */
+.jgd-xlarge-text {
+  font-size: x-large;
+}
+
+/* middle vertical allignment */
+.jgd-middle-vertical {
+  vertical-align: middle;
+}
+
 /* small bold text */
 .jgd-small-bold {
   font-weight: bolder;
@@ -48,4 +58,22 @@
 /* less transparent components*/
 .jgd-grey {
   color: #5e5e5b;
+}
+
+/* sharp edge components */
+.jgd-sharp-edge {
+  border-radius: 0px;
+}
+
+/* large button padding */
+.jgd-large-padded {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* button inner icon padding */
+.jgd-left-padded {
+  padding-left: 20px;
 }
