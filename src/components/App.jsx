@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import QuestionsList from './QuestionsList';
 import AddQuestionBtn from './AddQuestionBtn';
+import Search from './Search';
 import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
@@ -40,7 +41,7 @@ function App() {
       </div>
       <div className="row">
         <div className="col">
-          *Search Will Go Here*
+          <Search />
         </div>
       </div>
       <div className="row">
