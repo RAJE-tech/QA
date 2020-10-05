@@ -7,6 +7,8 @@ import getProductAnswers from '../api/getProductAnswers';
 
 function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
+  const [shownAnswers, setShownAnswers] = useState([]);
+  const [count, setCount] = useState(2);
   console.log('this is the question id', question.question_id);
   useEffect(() => {
     getProductAnswers(question.question_id)
@@ -49,6 +51,7 @@ function Question({ question, productName }) {
           </div>
           <div className="col">
             <AnswersList answers={answers} />
+            {answers.length > 2 ? <MoreAnswersBtn /> : null}
           </div>
         </div>
       </div>
