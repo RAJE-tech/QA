@@ -12,7 +12,8 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
         <span className="jgd-small-bold">
           ADD A QUESTION
         </span>
-        <span className="jgd-left-padded jgd-xlarge-text">
+        <span className="jgd-divider" />
+        <span className="jgd-small-bold">
           +
         </span>
       </Button>
