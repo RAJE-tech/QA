@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import QuestionsList from './QuestionsList';
 import AddQuestionBtn from './AddQuestionBtn';
+import MoreQuestionsBtn from './MoreQuestionsBtn';
 import Search from './Search';
 import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
 function App() {
-  const [productId, setProductId] = useState(3);
+  const [productId, setProductId] = useState(3000);
   const [productName, setProductName] = useState('');
   const [questions, setQuestions] = useState([]);
   const [shownQuestions, setShownQuestions] = useState();
@@ -56,14 +57,14 @@ function App() {
           />
         </div>
       </div>
-      <div className="row jgd-bottom-space">
-        <div className="col">
-          <AddQuestionBtn
-            productId={productId}
-            productName={productName}
-            setQuestions={setQuestions}
-          />
-        </div>
+      <div className="row jgd-bottom-space no-gutters">
+        <MoreQuestionsBtn />
+        <span className="jgd-divider" />
+        <AddQuestionBtn
+          productId={productId}
+          productName={productName}
+          setQuestions={setQuestions}
+        />
       </div>
     </div>
   );
