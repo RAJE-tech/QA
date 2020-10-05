@@ -8,7 +8,7 @@ function MoreQuestionsBtn({ count, setCount, questions }) {
         variant="outline-dark jgd-sharp-edge jgd-large-padded"
         size="lg"
         onClick={() => setCount(count + 2)}
-        disabled={count > questions.length}
+        disabled={count >= questions.length}
       >
         <span className="jgd-small-bold">
           MORE ANSWERED QUESTIONS
