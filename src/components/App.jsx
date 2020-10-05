@@ -47,7 +47,8 @@ function App() {
         <div className="col">
           <Search
             questions={questions}
-            setQuestions={setQuestions}
+            count={count}
+            setShownQuestions={setShownQuestions}
           />
         </div>
       </div>
