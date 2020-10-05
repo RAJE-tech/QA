@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AnswersList from './AnswersList';
 import QuestionHelpfulBtn from './QuestionHelpfulBtn';
+import MoreAnswersBtn from './MoreAnswersBtn';
 import AddAnswerBtn from './AddAnswerBtn';
 import getProductAnswers from '../api/getProductAnswers';
 
