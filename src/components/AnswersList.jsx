@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Answer from './Answer';
 
-function AnswersList({ answers }) {
+function AnswersList({ shownAnswers }) {
   return (
     <div>
-      {answers.map((answer) => <Answer answer={answer} key={answer.answer_id} />)}
+      {shownAnswers.map((answer) => <Answer answer={answer} key={answer.answer_id} />)}
     </div>
   );
 }

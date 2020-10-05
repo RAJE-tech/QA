@@ -24,15 +24,17 @@ function Question({ question, productName }) {
           }
           console.log('Seller sorted list:', sellerFirst);
           setAnswers(sellerFirst);
+          setShownAnswers(sellerFirst.slice(0, count));
         } else {
           console.log('result answer data from Greenfield:', res.data.results);
           setAnswers(res.data.results);
+          setShownAnswers(res.data.results.slice(0, count));
         }
       })
       .catch((err) => {
         throw err;
       });
-  }, [question.question_id]);
+  }, [question.question_id, count]);
 
   return (
     <div className="row">
@@ -50,7 +52,7 @@ function Question({ question, productName }) {
             <p className="jgd-large-bold">A:</p>
           </div>
           <div className="col">
-            <AnswersList answers={answers} />
+            <AnswersList shownAnswers={shownAnswers} />
             {answers.length > 2 ? <MoreAnswersBtn /> : null}
           </div>
         </div>
