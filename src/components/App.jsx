@@ -7,11 +7,12 @@ import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
 function App() {
-  const [productId, setProductId] = useState(3);
+  const [productId, setProductId] = useState(3000);
   const [productName, setProductName] = useState('');
   const [questions, setQuestions] = useState([]);
   const [shownQuestions, setShownQuestions] = useState([]);
   const [count, setCount] = useState(2);
+  const [searchActive, setSearchActive] = useState(false);
 
   useEffect(() => {
     getProductQuestions(productId)
@@ -48,6 +49,7 @@ function App() {
           <Search
             questions={questions}
             count={count}
+            setSearchActive={setSearchActive}
             setShownQuestions={setShownQuestions}
           />
         </div>
@@ -63,6 +65,7 @@ function App() {
       <div className="row jgd-bottom-space no-gutters">
         <MoreQuestionsBtn
           count={count}
+          searchActive={searchActive}
           questions={questions}
           setCount={setCount}
         />
