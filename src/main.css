@@ -19,6 +19,11 @@
   color: blue;
 }
 
+/* text once hovered over is underlined */
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
 /* "report" component once clicked */
 .jgd-reported {
   color: red;
@@ -121,4 +126,13 @@
 /* bottom-most component */
 .jgd-bottom-space {
   margin-bottom: 30px;
+}
+
+/* used in load more answers btn */
+.jgd-less-bottom-space {
+  margin-bottom: 20px;
+}
+
+.jgd-set-width {
+  width: 150px;
 }

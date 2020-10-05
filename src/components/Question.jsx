@@ -8,7 +8,6 @@ import getProductAnswers from '../api/getProductAnswers';
 function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
   const [shownAnswers, setShownAnswers] = useState([]);
-  const [count, setCount] = useState(2);
   console.log('this is the question id', question.question_id);
   useEffect(() => {
     getProductAnswers(question.question_id)
@@ -24,17 +23,17 @@ function Question({ question, productName }) {
           }
           console.log('Seller sorted list:', sellerFirst);
           setAnswers(sellerFirst);
-          setShownAnswers(sellerFirst.slice(0, count));
+          setShownAnswers(sellerFirst.slice(0, 2));
         } else {
           console.log('result answer data from Greenfield:', res.data.results);
           setAnswers(res.data.results);
-          setShownAnswers(res.data.results.slice(0, count));
+          setShownAnswers(res.data.results.slice(0, 2));
         }
       })
       .catch((err) => {
         throw err;
       });
-  }, [question.question_id, count]);
+  }, [question.question_id]);
 
   return (
     <div className="row">
@@ -53,7 +52,7 @@ function Question({ question, productName }) {
           </div>
           <div className="col">
             <AnswersList shownAnswers={shownAnswers} />
-            {answers.length > 2 ? <MoreAnswersBtn /> : null}
+            {answers.length > 2 ? <MoreAnswersBtn shownAnswers={shownAnswers} setShownAnswers={setShownAnswers} answers={answers} /> : null}
           </div>
         </div>
       </div>
