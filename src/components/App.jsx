@@ -10,18 +10,20 @@ function App() {
   const [productId, setProductId] = useState(3000);
   const [productName, setProductName] = useState('');
   const [questions, setQuestions] = useState([]);
-  const [shownQuestions, setShownQuestions] = useState();
+  const [shownQuestions, setShownQuestions] = useState([]);
+  const [count, setCount] = useState(2);
 
   useEffect(() => {
     getProductQuestions(productId)
       .then((res) => {
         console.log('result data from Greenfield:', res.data.results);
         setQuestions(res.data.results);
+        setShownQuestions(res.data.results.slice(0, count));
       })
       .catch((err) => {
         throw err;
       });
-  }, [productId]);
+  }, [productId, count]);
 
   useEffect(() => {
     getProductInfo(productId)
@@ -53,7 +55,7 @@ function App() {
         <div className="col">
           <QuestionsList
             productName={productName}
-            questions={questions}
+            shownQuestions={shownQuestions}
           />
         </div>
       </div>
