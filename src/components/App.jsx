@@ -60,7 +60,11 @@ function App() {
         </div>
       </div>
       <div className="row jgd-bottom-space no-gutters">
-        <MoreQuestionsBtn />
+        <MoreQuestionsBtn
+          count={count}
+          questions={questions}
+          setCount={setCount}
+        />
         <span className="jgd-divider" />
         <AddQuestionBtn
           productId={productId}
