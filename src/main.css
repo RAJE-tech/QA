@@ -146,6 +146,7 @@
   width: 150px;
 }
 
+/* thumnail for answer images */
 .thumbnail {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -153,6 +154,7 @@
   width: 110px;
 }
 
+/* hover effects on thumbnails */
 .thumbnail:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   cursor: pointer;
