@@ -7,7 +7,7 @@ import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
 function App() {
-  const [productId, setProductId] = useState(3);
+  const [productId, setProductId] = useState(8);
   const [productName, setProductName] = useState('');
   const [questions, setQuestions] = useState([]);
   const [shownQuestions, setShownQuestions] = useState([]);
