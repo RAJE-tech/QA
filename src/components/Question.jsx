@@ -40,7 +40,7 @@ function Question({ question, productName }) {
       <div className="col-8">
         <div className="row">
           <div className="col-0.5">
-            <p className="jgd-large-bold">Q:</p>
+            <p className="jgd-large-bold jgd-less-left-padded">Q:</p>
           </div>
           <div className="col">
             <div className="jgd-large-bold">{question.question_body}</div>
@@ -48,7 +48,7 @@ function Question({ question, productName }) {
         </div>
         <div className="row">
           <div className="col-0.5">
-            <p className="jgd-large-bold">A:</p>
+            <p className="jgd-large-bold jgd-less-left-padded">A:</p>
           </div>
           <div className="col">
             <AnswersList shownAnswers={shownAnswers} />
