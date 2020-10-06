@@ -96,12 +96,9 @@
 
 /* magnifying glass search icon */
 .jgd-magnifying-glass {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* get that border out of here */
