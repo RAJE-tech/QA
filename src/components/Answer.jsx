@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AnswerHelpfulBtn from './AnswerHelpfulBtn';
 import ReportAnswerBtn from './ReportAnswerBtn';
 import convertDate from './dateConverter';
+import AnswerImages from './AnswerImages';
 
 function Answer({ answer }) {
   return (
@@ -10,6 +11,9 @@ function Answer({ answer }) {
         <div className="row">
           <div className="col">
             <p>{answer.body}</p>
+            <div className={`row ${answer.photos.length > 0 ? 'jgd-even-less-bottom-space' : null}`}>
+              {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
+            </div>
           </div>
         </div>
         <div className="row">

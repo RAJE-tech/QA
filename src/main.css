@@ -137,7 +137,25 @@
   margin-bottom: 20px;
 }
 
+.jgd-even-less-bottom-space {
+  margin-bottom: 15px;
+}
+
 /* used in load more answers btn */
 .jgd-set-width {
   width: 150px;
+}
+
+/* thumnail for answer images */
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 110px;
+}
+
+/* hover effects on thumbnails */
+.thumbnail:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  cursor: pointer;
 }
