@@ -11,7 +11,9 @@ function Answer({ answer }) {
         <div className="row">
           <div className="col">
             <p>{answer.body}</p>
-            {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
+            <div className="row">
+              {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
+            </div>
           </div>
         </div>
         <div className="row">

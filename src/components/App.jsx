@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     getProductQuestions(productId)
       .then((res) => {
-        console.log('result data from Greenfield:', res.data.results);
         setQuestions(res.data.results);
         setShownQuestions(res.data.results.slice(0, count));
       })
@@ -29,7 +28,6 @@ function App() {
   useEffect(() => {
     getProductInfo(productId)
       .then((res) => {
-        console.log('this is the product name: ', res.data.name);
         setProductName(res.data.name);
       })
       .catch((err) => {

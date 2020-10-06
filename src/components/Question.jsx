@@ -8,7 +8,6 @@ import getProductAnswers from '../api/getProductAnswers';
 function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
   const [shownAnswers, setShownAnswers] = useState([]);
-  console.log('this is the question id', question.question_id);
   useEffect(() => {
     getProductAnswers(question.question_id)
       .then((res) => {
@@ -21,11 +20,9 @@ function Question({ question, productName }) {
               sellerFirst.push(res.data.results[i]);
             }
           }
-          console.log('Seller sorted list:', sellerFirst);
           setAnswers(sellerFirst);
           setShownAnswers(sellerFirst.slice(0, 2));
         } else {
-          console.log('result answer data from Greenfield:', res.data.results);
           setAnswers(res.data.results);
           setShownAnswers(res.data.results.slice(0, 2));
         }
