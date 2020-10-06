@@ -11,7 +11,7 @@ function Answer({ answer }) {
         <div className="row">
           <div className="col">
             <p>{answer.body}</p>
-            <div className="row">
+            <div className={`row ${answer.photos.length > 0 ? 'jgd-even-less-bottom-space' : null}`}>
               {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
             </div>
           </div>
