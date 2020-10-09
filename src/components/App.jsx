@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import QuestionsList from './QuestionsList';
 import AddQuestionBtn from './AddQuestionBtn';
 import MoreQuestionsBtn from './MoreQuestionsBtn';
@@ -6,13 +7,17 @@ import Search from './Search';
 import getProductQuestions from '../api/getProductQuestions';
 import getProductInfo from '../api/getProductInfo';
 
-function App() {
-  const [productId, setProductId] = useState(8);
+function App({ base }) {
   const [productName, setProductName] = useState('');
   const [questions, setQuestions] = useState([]);
   const [shownQuestions, setShownQuestions] = useState([]);
   const [count, setCount] = useState(2);
   const [searchActive, setSearchActive] = useState(false);
+
+  let { productId } = useParams();
+  if (base === true) {
+    productId = 8;
+  }
 
   useEffect(() => {
     getProductQuestions(productId)

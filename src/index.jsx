@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import ParamsRouter from './components/ParamsRouter';
 import './main.css';
 
-ReactDOM.render(<App />, document.getElementById('qa'));
+ReactDOM.render(<ParamsRouter />, document.getElementById('qa'));
