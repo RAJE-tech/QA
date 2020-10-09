@@ -9,6 +9,6 @@ app.get('*', (req, res) => {
   res.sendFile('index.html', { root: path.join(__dirname, './dist') });
 });
 
-app.listen(3004, () => {
+app.listen(3003, () => {
   console.log('Questions & Answers is listening on port 3003');
 });
