@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AnswerHelpfulBtn from './AnswerHelpfulBtn';
 import ReportAnswerBtn from './ReportAnswerBtn';
 import AnswerImages from './AnswerImages';
