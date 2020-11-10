@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import Answer from '../api/answer';
+import markAsHelpful from '../api/answer';
 
 function AnswerHelpfulBtn({ answer }) {
   const [isHelpful, setIsHelpful] = useState(false);
   const [helpfulness, setHelpfulness] = useState(answer.helpfulness);
 
-  function markAsHelpful(event) {
+  function markHelpful(event) {
     event.preventDefault();
     setIsHelpful(!isHelpful);
-    Answer.markAsHelpful(answer.answer_id)
+    markAsHelpful(answer.answer_id)
       .then((res) => {
         setHelpfulness(helpfulness + 1);
         console.log(res);
@@ -23,7 +23,7 @@ function AnswerHelpfulBtn({ answer }) {
       <span>Helpful? </span>
       <span
         onKeyDown={null}
-        onClick={!isHelpful ? markAsHelpful : null}
+        onClick={!isHelpful ? markHelpful : null}
         className={!isHelpful ? 'jgd-pointer' : 'jgd-pointer jgd-helpful'}
       >
         <u>Yes</u>
