@@ -1,7 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-function MoreQuestionsBtn({ count, setCount, questions, searchActive }) {
+function MoreQuestionsBtn({
+  count,
+  setCount,
+  questions,
+  searchActive
+}) {
   return (
     <span>
       <Button
