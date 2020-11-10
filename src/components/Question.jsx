@@ -9,7 +9,7 @@ function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
   const [shownAnswers, setShownAnswers] = useState([]);
   useEffect(() => {
-    Q.getAnswers(question.question_id)
+    Q.getAnswers(question.question_id)iIm
       .then((res) => {
         let sellerFirst = [];
         let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import markAsHelpful from '../api/answer';
+import Answer from '../api/answer';
 
 function AnswerHelpfulBtn({ answer }) {
   const [isHelpful, setIsHelpful] = useState(false);
@@ -8,7 +8,7 @@ function AnswerHelpfulBtn({ answer }) {
   function markHelpful(event) {
     event.preventDefault();
     setIsHelpful(!isHelpful);
-    markAsHelpful(answer.answer_id)
+    Answer.markAsHelpful(answer.answer_id)
       .then((res) => {
         setHelpfulness(helpfulness + 1);
         console.log(res);

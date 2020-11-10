@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, FormFile } from 'react-bootstrap';
-import getAnswers from '../api/question';
+import Answer from '../api/question';
 
 const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
   const [validated, setValidated] = useState(false);
@@ -31,7 +31,7 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
     })
       .then(() => {
         onHide();
-        getAnswers(question.question_id)
+        Answer.getAnswers(question.question_id)
           .then((res) => {
             let sellerFirst = [];
             let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
