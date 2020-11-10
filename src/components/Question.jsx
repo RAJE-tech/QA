@@ -3,13 +3,13 @@ import AnswersList from './AnswersList';
 import QuestionHelpfulBtn from './QuestionHelpfulBtn';
 import MoreAnswersBtn from './MoreAnswersBtn';
 import AddAnswerBtn from './AddAnswerBtn';
-import getProductAnswers from '../api/getProductAnswers';
+import getAnswers from '../api/question';
 
 function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
   const [shownAnswers, setShownAnswers] = useState([]);
   useEffect(() => {
-    getProductAnswers(question.question_id)
+    getAnswers(question.question_id)
       .then((res) => {
         let sellerFirst = [];
         let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
