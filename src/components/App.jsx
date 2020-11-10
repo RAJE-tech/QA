@@ -4,8 +4,7 @@ import QuestionsList from './QuestionsList';
 import AddQuestionBtn from './AddQuestionBtn';
 import MoreQuestionsBtn from './MoreQuestionsBtn';
 import Search from './Search';
-import getProductQuestions from '../api/getProductQuestions';
-import getProductInfo from '../api/getProductInfo';
+import Product from '../api/product';
 
 function App({ base }) {
   const [productName, setProductName] = useState('');
@@ -20,7 +19,7 @@ function App({ base }) {
   }
 
   useEffect(() => {
-    getProductQuestions(productId)
+    Product.getQuestions(productId)
       .then((res) => {
         setQuestions(res.data.results);
         setShownQuestions(res.data.results.slice(0, count));
@@ -31,7 +30,7 @@ function App({ base }) {
   }, [productId, count]);
 
   useEffect(() => {
-    getProductInfo(productId)
+    Product.getProduct(productId)
       .then((res) => {
         setProductName(res.data.name);
       })
