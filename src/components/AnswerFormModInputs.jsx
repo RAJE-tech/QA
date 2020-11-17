@@ -12,6 +12,22 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
     photos: [],
   });
 
+  function sortBySeller(res) {
+    const sellerFirst = [];
+    const filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
+    if (filtered.length > 0) {
+      filtered.map((answer) => sellerFirst.push(answer));
+      for (let i = 0; i < res.data.results.length; i += 1) {
+        if (res.data.results[i].answerer_name !== 'Seller') {
+          sellerFirst.push(res.data.results[i]);
+        }
+      }
+      setAnswers(sellerFirst);
+    } else {
+      setAnswers(res.data.results);
+    }
+  }
+
   function submitForm(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -32,21 +48,7 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
       .then(() => {
         onHide();
         Answer.getAnswers(question.question_id)
-          .then((res) => {
-            let sellerFirst = [];
-            let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
-            if (filtered.length > 0) {
-              filtered.map((answer) => sellerFirst.push(answer));
-              for (let i = 0; i < res.data.results.length; i += 1) {
-                if (res.data.results[i].answerer_name !== 'Seller') {
-                  sellerFirst.push(res.data.results[i]);
-                }
-              }
-              setAnswers(sellerFirst);
-            } else {
-              setAnswers(res.data.results);
-            }
-          })
+          .then((res) => sortBySeller(res))
           .catch((err) => {
             throw err;
           });
