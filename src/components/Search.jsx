@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-function Search({ questions, setShownQuestions, count, setSearchActive }) {
+function Search({
+  questions,
+  setShownQuestions,
+  count,
+  setSearchActive
+}) {
   const [state, setState] = useState({
     searchInput: '',
   });
 
   useEffect(() => {
     if (state.searchInput.length > 2) {
-      const filteredQuestions = questions.filter(question => question.question_body.toLowerCase().includes(state.searchInput.toLowerCase()));
+      const filteredQuestions = questions.filter((question) => question.question_body.toLowerCase().includes(state.searchInput.toLowerCase()));
       setShownQuestions(filteredQuestions);
       setSearchActive(true);
     } else {
       setShownQuestions(questions.slice(0, count));
       setSearchActive(false);
     }
-  }, [state.searchInput, questions, setShownQuestions, count]);
+  }, [state.searchInput, questions, setShownQuestions, count, setSearchActive]);
 
   function handleChange(event) {
     const { value } = event.target;
