@@ -8,25 +8,28 @@ import Q from '../api/question';
 function Question({ question, productName }) {
   const [answers, setAnswers] = useState([]);
   const [shownAnswers, setShownAnswers] = useState([]);
+
+  function sortBySellerMaxTwoResults(res) {
+    const sellerFirst = [];
+    const filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
+    if (filtered.length > 0) {
+      filtered.map((answer) => sellerFirst.push(answer));
+      for (let i = 0; i < res.data.results.length; i += 1) {
+        if (res.data.results[i].answerer_name !== 'Seller') {
+          sellerFirst.push(res.data.results[i]);
+        }
+      }
+      setAnswers(sellerFirst);
+      setShownAnswers(sellerFirst.slice(0, 2));
+    } else {
+      setAnswers(res.data.results);
+      setShownAnswers(res.data.results.slice(0, 2));
+    }
+  }
+
   useEffect(() => {
     Q.getAnswers(question.question_id)
-      .then((res) => {
-        let sellerFirst = [];
-        let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
-        if (filtered.length > 0) {
-          filtered.map((answer) => sellerFirst.push(answer));
-          for (let i = 0; i < res.data.results.length; i += 1) {
-            if (res.data.results[i].answerer_name !== 'Seller') {
-              sellerFirst.push(res.data.results[i]);
-            }
-          }
-          setAnswers(sellerFirst);
-          setShownAnswers(sellerFirst.slice(0, 2));
-        } else {
-          setAnswers(res.data.results);
-          setShownAnswers(res.data.results.slice(0, 2));
-        }
-      })
+      .then((res) => sortBySellerMaxTwoResults(res))
       .catch((err) => {
         throw err;
       });
