@@ -10,16 +10,13 @@ function MoreQuestionsBtn({
   return (
     <div className="col-4">
       <Button
-        variant="outline-dark jgd-sharp-edge jgd-white-background jgd-large-padded"
+        variant="outline-dark jgd-sharp-edge jgd-white-background jgd-small-bold jgd-large-padded"
         size="lg"
         onClick={() => setCount(count + 2)}
         disabled={count >= questions.length || searchActive}
       >
-        <span className="jgd-small-bold">
-          MORE ANSWERED QUESTIONS
-        </span>
+        MORE ANSWERED QUESTIONS
       </Button>
-      {' '}
     </div>
   );
 }
