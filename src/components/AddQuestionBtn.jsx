@@ -7,7 +7,7 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <span>
+    <div className="col-4">
       <Button variant="outline-dark jgd-sharp-edge jgd-large-padded jgd-white-background" size="lg" onClick={handleShow}>
         <span className="jgd-small-bold">
           ADD A QUESTION
@@ -25,7 +25,7 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
         onHide={handleClose}
         setQuestions={setQuestions}
       />
-    </span>
+    </div>
   );
 }
 

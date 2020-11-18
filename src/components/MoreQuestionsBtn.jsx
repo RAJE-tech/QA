@@ -8,7 +8,7 @@ function MoreQuestionsBtn({
   searchActive
 }) {
   return (
-    <span>
+    <div className="col-4">
       <Button
         variant="outline-dark jgd-sharp-edge jgd-white-background jgd-large-padded"
         size="lg"
@@ -20,7 +20,7 @@ function MoreQuestionsBtn({
         </span>
       </Button>
       {' '}
-    </span>
+    </div>
   );
 }
 

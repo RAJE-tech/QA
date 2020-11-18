@@ -69,7 +69,6 @@ function App({ base }) {
           questions={questions}
           setCount={setCount}
         />
-        <span className="jgd-divider" />
         <AddQuestionBtn
           productId={productId}
           productName={productName}
