@@ -80,6 +80,11 @@
   padding: 20px;
 }
 
+/* width 100% */
+.jgd-width-100 {
+  width: 100%;
+}
+
 /* button inner icon padding */
 .jgd-left-padded {
   padding-left: 20px;
