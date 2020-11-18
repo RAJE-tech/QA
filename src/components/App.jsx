@@ -46,15 +46,13 @@ function App({ base }) {
           <h5>QUESTIONS & ANSWERS</h5>
         </div>
       </div>
-      <div className="row">
-        <div className="col">
-          <Search
-            questions={questions}
-            count={count}
-            setSearchActive={setSearchActive}
-            setShownQuestions={setShownQuestions}
-          />
-        </div>
+      <div className="row-noGutters">
+        <Search
+          questions={questions}
+          count={count}
+          setSearchActive={setSearchActive}
+          setShownQuestions={setShownQuestions}
+        />
       </div>
       <div className="row">
         <div className="col">
