@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import reportAnswer from '../api/reportAnswer';
+import Answer from '../api/answer';
 
 function ReportAnswerBtn({ answer }) {
   const [isReported, setIsReported] = useState(false);
 
   function markAsReported(event) {
     event.preventDefault();
-    reportAnswer(answer.answer_id)
+    Answer.report(answer.answer_id)
       .then((res) => {
         setIsReported(!isReported);
         console.log(res);

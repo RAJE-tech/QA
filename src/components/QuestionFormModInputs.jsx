@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-import getProductQuestions from '../api/getProductQuestions';
+import Product from '../api/product';
 
 const QuestionFormModInputs = ({ onHide, productId, setQuestions }) => {
   const [validated, setValidated] = useState(false);
@@ -29,7 +29,7 @@ const QuestionFormModInputs = ({ onHide, productId, setQuestions }) => {
     })
       .then(() => {
         onHide();
-        getProductQuestions(productId)
+        Product.getQuestions(productId)
           .then((res) => {
             setQuestions(res.data.results);
           })

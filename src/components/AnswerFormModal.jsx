@@ -2,7 +2,13 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import AnswerFormModInputs from './AnswerFormModInputs';
 
-function AnswerFormModal({ show, onHide, question, productName, setAnswers }) {
+function AnswerFormModal({
+  show,
+  onHide,
+  question,
+  productName,
+  setAnswers,
+}) {
   if (show) {
     return (
       <Modal show={show} onHide={onHide}>

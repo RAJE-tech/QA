@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, FormFile } from 'react-bootstrap';
-import getProductAnswers from '../api/getProductAnswers';
+import Answer from '../api/question';
 
 const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
   const [validated, setValidated] = useState(false);
@@ -11,6 +11,22 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
     email: '',
     photos: [],
   });
+
+  function sortBySeller(res) {
+    const sellerFirst = [];
+    const filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
+    if (filtered.length > 0) {
+      filtered.map((answer) => sellerFirst.push(answer));
+      for (let i = 0; i < res.data.results.length; i += 1) {
+        if (res.data.results[i].answerer_name !== 'Seller') {
+          sellerFirst.push(res.data.results[i]);
+        }
+      }
+      setAnswers(sellerFirst);
+    } else {
+      setAnswers(res.data.results);
+    }
+  }
 
   function submitForm(event) {
     event.preventDefault();
@@ -31,22 +47,8 @@ const AnswerFormModInputs = ({ onHide, question, setAnswers }) => {
     })
       .then(() => {
         onHide();
-        getProductAnswers(question.question_id)
-          .then((res) => {
-            let sellerFirst = [];
-            let filtered = res.data.results.filter((answer) => answer.answerer_name === 'Seller');
-            if (filtered.length > 0) {
-              filtered.map((answer) => sellerFirst.push(answer));
-              for (let i = 0; i < res.data.results.length; i += 1) {
-                if (res.data.results[i].answerer_name !== 'Seller') {
-                  sellerFirst.push(res.data.results[i]);
-                }
-              }
-              setAnswers(sellerFirst);
-            } else {
-              setAnswers(res.data.results);
-            }
-          })
+        Answer.getAnswers(question.question_id)
+          .then((res) => sortBySeller(res))
           .catch((err) => {
             throw err;
           });
