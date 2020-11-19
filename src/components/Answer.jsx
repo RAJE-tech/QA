@@ -32,13 +32,9 @@ function Answer({ answer }) {
   return (
     <div className="row">
       <div className="col">
-        <div className="row">
-          <div className="col">
-            <p>{answer.body}</p>
-            <div className={`row ${answer.photos.length > 0 ? 'jgd-even-less-bottom-space' : null}`}>
-              {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
-            </div>
-          </div>
+        <p>{answer.body}</p>
+        <div className={`row ${answer.photos.length > 0 ? 'jgd-even-less-bottom-space' : null}`}>
+          {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
         </div>
         <div className="row">
           <div className="col">
