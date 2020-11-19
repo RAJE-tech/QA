@@ -7,8 +7,8 @@ function AnswerImages({ image }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="col-2">
-      <Image className="thumbnail" src={`${image.url}/171x180`} alt="alt" onClick={handleShow} />
+    <div>
+      <Image className="thumbnail" src={`${image.url}/171x180`} alt="alt" onClick={handleShow} fluid />
       <AnswerImageModal
         image={image}
         show={show}
