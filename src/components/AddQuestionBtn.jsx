@@ -8,7 +8,11 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
   const handleShow = () => setShow(true);
   return (
     <div className="col">
-      <Button variant="outline-dark jgd-sharp-edge jgd-large-padded jgd-white-background jgd-small-bold" size="lg" onClick={handleShow}>
+      <Button
+        variant="outline-dark jgd-less-top-space jgd-sharp-edge jgd-large-padded jgd-white-background jgd-small-bold"
+        size="lg"
+        onClick={handleShow}
+      >
         ADD A QUESTION
         <span className="jgd-divider" />
         +

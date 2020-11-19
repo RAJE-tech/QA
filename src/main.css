@@ -130,6 +130,11 @@
   margin-top: 30px;
 }
 
+/* components that need minor top spacing */
+.jgd-less-top-space {
+  margin-top: 20px;
+}
+
 /* bottom-most component */
 .jgd-bottom-space {
   margin-bottom: 30px;
