@@ -57,7 +57,7 @@ const QuestionFormModInputs = ({ onHide, productId, setQuestions }) => {
 
         <Form.Group controlId="body">
           <Form.Label>Your Question*</Form.Label>
-          <Form.Control required as="textarea" rows="3" name="body" value={state.body} maxlength="1000" onChange={handleChange} />
+          <Form.Control required as="textarea" rows="3" name="body" value={state.body} maxLength="1000" onChange={handleChange} />
           <Form.Control.Feedback type="invalid">
             Please provide a question.
           </Form.Control.Feedback>
@@ -69,7 +69,7 @@ const QuestionFormModInputs = ({ onHide, productId, setQuestions }) => {
           <Form.Text className="jgd-faded">
             For privacy reasons, do not use your full name or email address
           </Form.Text>
-          <Form.Control required as="textarea" rows="1" name="name" maxlength="60" placeholder="Example: jackson11!" value={state.name} onChange={handleChange} />
+          <Form.Control required as="textarea" rows="1" name="name" maxLength="60" placeholder="Example: jackson11!" value={state.name} onChange={handleChange} />
           <Form.Control.Feedback type="invalid">
             Please choose a nickname.
           </Form.Control.Feedback>
@@ -81,7 +81,7 @@ const QuestionFormModInputs = ({ onHide, productId, setQuestions }) => {
           <Form.Text className="jgd-faded">
             For authentication reasons, you will not be emailed
           </Form.Text>
-          <Form.Control required type="email" placeholder="Example: jackson@email.com" maxlength="60" name="email" value={state.email} onChange={handleChange} />
+          <Form.Control required type="email" placeholder="Example: jackson@email.com" maxLength="60" name="email" value={state.email} onChange={handleChange} />
           <Form.Control.Feedback type="invalid">
             Please provide a valid email.
           </Form.Control.Feedback>
