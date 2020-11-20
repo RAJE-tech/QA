@@ -19,7 +19,7 @@ function QuestionHelpfulBtn({ question }) {
   }
 
   return (
-    <span className="jgd-small-text jgd-grey">
+    <div className="jgd-small-text jgd-grey">
       <span>Helpful? </span>
       <span
         onKeyDown={null}
@@ -29,7 +29,7 @@ function QuestionHelpfulBtn({ question }) {
         <u>Yes</u>
         {` (${helpfulness})`}
       </span>
-    </span>
+    </div>
   );
 }
 
