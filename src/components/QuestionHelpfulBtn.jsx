@@ -27,10 +27,6 @@ function QuestionHelpfulBtn({ question }) {
         className={!isHelpful ? 'jgd-pointer' : 'jgd-pointer jgd-helpful'}
       >
         <u>Yes</u>
-      </span>
-      <span
-        className={!isHelpful ? null : 'jgd-helpful'}
-      >
         {` (${helpfulness})`}
       </span>
     </span>
