@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "build": "webpack -d -w",
-    "start:dev": "webpack-dev-server --open --hot --mode development"
+    "start:dev": "webpack-dev-server --open --hot --mode development",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
