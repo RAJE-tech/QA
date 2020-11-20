@@ -31,33 +31,28 @@ const convertDate = (date) => {
 function Answer({ answer }) {
   return (
     <div className="row">
-      <div className="col">
-        <div className="row">
-          <div className="col">
-            <p>{answer.body}</p>
+      <div className="col jgd-less-bottom-space">
+        <p>{answer.body}</p>
+        <div className="container">
             <div className={`row ${answer.photos.length > 0 ? 'jgd-even-less-bottom-space' : null}`}>
               {answer.photos.length > 0 ? answer.photos.map((image) => <AnswerImages image={image} key={image.id} />) : null}
-            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <div>
-              <span className="jgd-small-text jgd-faded">
-                {'by '}
-              </span>
-              <span className={answer.answerer_name === 'Seller' ? 'jgd-small-text jgd-small-bold' : 'jgd-small-text jgd-faded'}>
-                {answer.answerer_name}
-              </span>
-              <span className="jgd-small-text jgd-faded">
-                {`, ${convertDate(answer.date)}`}
-              </span>
-              <span className="jgd-divider jgd-faded">|</span>
-              <AnswerHelpfulBtn answer={answer} />
-              <span className="jgd-divider jgd-faded">|</span>
-              <ReportAnswerBtn answer={answer} />
-            </div>
-            <br />
+        <div className="container">
+          <div className="row">
+            <span className="jgd-small-text jgd-faded jgd-small-divider">
+              by
+            </span>
+            <span className={answer.answerer_name === 'Seller' ? 'jgd-small-text jgd-small-bold' : 'jgd-small-text jgd-faded'}>
+              {answer.answerer_name}
+            </span>
+            <span className="jgd-small-text jgd-faded">
+              {`, ${convertDate(answer.date)}`}
+            </span>
+            <span className="jgd-divider jgd-faded">|</span>
+            <AnswerHelpfulBtn answer={answer} />
+            <span className="jgd-divider jgd-faded">|</span>
+            <ReportAnswerBtn answer={answer} />
           </div>
         </div>
       </div>

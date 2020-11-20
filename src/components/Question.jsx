@@ -39,7 +39,7 @@ function Question({ question, productName }) {
     <div className="row">
       <div className="col-8">
         <div className="row">
-          <div className="col-0.5">
+          <div className="col-1-noGutters">
             <p className="jgd-large-bold jgd-less-left-padded">Q:</p>
           </div>
           <div className="col">
@@ -47,7 +47,7 @@ function Question({ question, productName }) {
           </div>
         </div>
         <div className="row">
-          <div className="col-0.5">
+          <div className="col-1-noGutters">
             <p className="jgd-large-bold jgd-less-left-padded">A:</p>
           </div>
           <div className="col">
@@ -56,9 +56,8 @@ function Question({ question, productName }) {
           </div>
         </div>
       </div>
-      <div className="col" style={{ textAlign: 'right' }}>
+      <div className="col-4" style={{ textAlign: 'right' }}>
         <QuestionHelpfulBtn question={question} />
-        <span className="jgd-divider jgd-faded">|</span>
         <AddAnswerBtn
           question={question}
           productName={productName}

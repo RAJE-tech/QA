@@ -60,6 +60,11 @@
   margin-right: 10px;
 }
 
+/* substitution for UTF space */
+.jgd-small-divider {
+  margin-right: 4px;
+}
+
 /* more transparent components */
 .jgd-faded {
   color: #2125298c;
@@ -128,6 +133,11 @@
 /* top-most component */
 .jgd-top-space {
   margin-top: 30px;
+}
+
+/* components that need minor top spacing */
+.jgd-less-top-space {
+  margin-top: 20px;
 }
 
 /* bottom-most component */

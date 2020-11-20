@@ -62,14 +62,13 @@ function App({ base }) {
           />
         </div>
       </div>
-      <div className="row jgd-bottom-space no-gutters">
+      <div className="row jgd-bottom-space">
         <MoreQuestionsBtn
           count={count}
           searchActive={searchActive}
           questions={questions}
           setCount={setCount}
         />
-        <span className="jgd-divider" />
         <AddQuestionBtn
           productId={productId}
           productName={productName}
