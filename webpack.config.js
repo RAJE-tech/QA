@@ -5,12 +5,15 @@ module.exports = {
       {
         test: [/\.(js|jsx)$/],
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
+        use: [
+          {
+            loader: 'react-hot-loader/webpack',
           },
-        },
+          {
+            loader: 'babel-loader',
+            options: { presets: ['@babel/preset-react', '@babel/preset-env'] },
+          }
+        ],
       },
       {
         test: /\.css$/,

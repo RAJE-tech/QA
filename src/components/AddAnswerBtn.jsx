@@ -6,7 +6,7 @@ function AddAnswerBtn({ question, productName, setAnswers }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <span>
+    <div>
       <span className="jgd-small-text jgd-pointer jgd-faded" onClick={handleShow} onKeyDown={null}><u>Add Answer</u></span>
       <AnswerFormModal
         show={show}
@@ -15,7 +15,7 @@ function AddAnswerBtn({ question, productName, setAnswers }) {
         onHide={handleClose}
         setAnswers={setAnswers}
       />
-    </span>
+    </div>
   );
 }
 

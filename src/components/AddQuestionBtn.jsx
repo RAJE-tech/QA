@@ -7,17 +7,16 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <span>
-      <Button variant="outline-dark jgd-sharp-edge jgd-large-padded jgd-white-background" size="lg" onClick={handleShow}>
-        <span className="jgd-small-bold">
-          ADD A QUESTION
-        </span>
+    <div className="col">
+      <Button
+        variant="outline-dark jgd-less-top-space jgd-sharp-edge jgd-large-padded jgd-white-background jgd-small-bold"
+        size="lg"
+        onClick={handleShow}
+      >
+        ADD A QUESTION
         <span className="jgd-divider" />
-        <span className="jgd-small-bold">
-          +
-        </span>
+        +
       </Button>
-      {' '}
       <QuestionFormModal
         show={show}
         productId={productId}
@@ -25,7 +24,7 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
         onHide={handleClose}
         setQuestions={setQuestions}
       />
-    </span>
+    </div>
   );
 }
 
