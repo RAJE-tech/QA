@@ -7,7 +7,7 @@ function AddQuestionBtn({ productId, productName, setQuestions }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="col">
+    <div className="col auto">
       <Button
         variant="outline-dark jgd-less-top-space jgd-sharp-edge jgd-large-padded jgd-white-background jgd-small-bold"
         size="lg"

@@ -8,7 +8,7 @@ function MoreQuestionsBtn({
   searchActive
 }) {
   return (
-    <div className="col-4">
+    <div className="col auto">
       <Button
         variant="outline-dark jgd-less-top-space jgd-sharp-edge jgd-white-background jgd-small-bold jgd-large-padded"
         size="lg"
