@@ -1,4 +1,7 @@
 # BRAC Retail Model — Questions & Answers
+
+![](images/fec-demo.gif)
+
 ## Tech Framework Used
 #### Built With
 - react
@@ -25,3 +28,7 @@ npm run build
 ```
 npm run start
 ```
+
+### P.S. — It's Responsive!
+
+![](images/fec-responsive.gif)
