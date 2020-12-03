@@ -11,7 +11,7 @@ function MoreAnswersBtn({ answers, shownAnswers, setShownAnswers }) {
   return (
     <div
       onClick={shownAnswers.length < answers.length ? showMoreAnswers : showLessAnswers}
-      className="jgd-pointer hover-underline jgd-small-text jgd-set-width"
+      className="jgd-pointer hover-underline jgd-small-text jgd-set-width jgd-less-bottom-space"
     >
       <b>{shownAnswers.length < answers.length ? 'LOAD MORE ANSWERS' : 'COLLAPSE ANSWERS' }</b>
     </div>
