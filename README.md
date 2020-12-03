@@ -2,7 +2,7 @@
 
 ![](images/fec-demo.gif)
 
-## Tech Framework Used
+## Tech Stack
 #### Built With
 - react
 - react-bootstrap
